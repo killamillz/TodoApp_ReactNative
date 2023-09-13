@@ -15,7 +15,9 @@ function AddTodo({submitHandler}) {
         placeholder='New Todo...'
         onChangeText={changeHandler}
       /> 
-      <Button onPress={() => submitHandler(text)} title = 'add todo'  color={"black"}/>
+      <View style={styles.button}> 
+        <Button onPress={() => submitHandler(text)} title = 'add todo'  color={"white"} />
+      </View>
     </View>
   )
 }
@@ -27,6 +29,12 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     borderBottomWidth: 1,
     borderBottomColor: '#ddd'
+  },
+  button: {
+    backgroundColor: "black",
+    borderRadius: 10,
+    height: 50,
+    justifyContent: "center"
   }
 })
 
