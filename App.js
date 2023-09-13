@@ -5,9 +5,9 @@ import Header from './components/Header';
 
 export default function App() {
      const [todos, setTodos] = useState([
-          {Text: "Onvail Frontend", key: "1"},
-          {Text: "Take my bath", key: "2"},
-          {Text: "Read the book i bought", id: "3"}
+          {text: "Onvail Frontend", key: "1"},
+          {text: "Take my bath", key: "2"},
+          {text: "Read the book i bought", key: "3"}
      ])
      
   return (
@@ -15,7 +15,7 @@ export default function App() {
           <Header />
           <View style={styles.content}>
                {/* forms */}
-                <View style={style.list}>
+                <View style={styles.list}>
                   <FlatList 
                     data={todos}
                     renderItem={({item}) => (
